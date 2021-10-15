@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="keywords"
+      content="ゴンべ,甘い香りのする木,あまいかおりのするき,ポケットモンスター ダイヤモンド・パール,ポケットモンスター プラチナ"
+    />
+    <meta
+      name="description"
+      content="このサイトは、ポケットモンスター
+    ダイヤモンド・パール・プラチナにおける「ゴンべ」が出現する「あまいかおりのするき」を特定するサイトです。"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>【ポケモンDPt】ゴンべの成る木</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-main>
+          <v-app-bar color="deep-purple accent-4" dark>
+            <v-toolbar-title>【ポケモンDPt】ゴンべの成る木</v-toolbar-title>
+          </v-app-bar>
+          <v-container>
+            <v-text-field
+              v-model="id"
+              :counter="5"
+              maxlength="5"
+              label="表ID"
+              required
+            ></v-text-field>
+            <v-btn block @click="check(id)">確認</v-btn>
+          </v-container>
+
+          <v-container>
+            <h1 v-if="first || second">ゴンべの出現する木</h1>
+            <v-alert
+              color="#2A3B4D"
+              class="mb-2"
+              dark
+              icon="mdi-firework"
+              dense
+              v-if="first"
+            >
+              {{first}}
+            </v-alert>
+            <v-alert
+              color="#2A3B4D"
+              class="mb-2"
+              dark
+              icon="mdi-firework"
+              dense
+              v-if="second"
+            >
+              {{second}}
+            </v-alert>
+          </v-container>
+
+          <v-container>
+            <v-card width="400px" class="mx-auto my-12">
+              <v-card-title>ゴンべの成る木とは?</v-card-title>
+              <v-card-text>
+                ポケットモンスター
+                ダイヤモンド・パール・プラチナにおける「ゴンべ」が出現する「あまいかおりのするき」を特定するサイトです。
+              </v-card-text>
+            </v-card>
+
+            <v-card width="400px" class="mx-auto my-12">
+              <v-card-title>ゴンべの出現条件は?</v-card-title>
+              <v-card-text>
+                ゲーム内では、21本の『あまいかおりのするき』が存在します。
+                この木にあまいミツを塗り、6時間以上時間が経つと、ポケモンが寄ってくることがあります。
+                その木の中から『4本』の木に低確率で出現します。
+              </v-card-text>
+              <v-card-text>
+                この『ゴンべが出現する4本の木』を決定するのは、『プレイヤーのID』と『プレイヤーの裏ID』です。
+              </v-card-text>
+
+              <v-card-text>
+                裏IDは(正規の方法では)確認できないので、このサイトではプレイヤーのIDで分かる『ゴンべが出現する4本の木の内の2本』を特定するサイトです
+              </v-card-text>
+            </v-card>
+
+            <v-card width="400px" class="mx-auto my-12">
+              <v-card-title>規約</v-card-title>
+              <v-card-text>
+                <ul>
+                  <li>
+                    ゴンべの出現確率はかなり低く、当たりの木が分かれば簡単に手に入るわけではありません。
+                  </li>
+                  <li>
+                    プログラムのミスや計算ミスがある場合は、『ゴンべが出現しない』場所が結果として表示される可能性があります。
+                  </li>
+                  <li>
+                    当サイトにて発生した損失や損害については、一切責任を負いかねます。
+                  </li>
+                </ul>
+              </v-card-text>
+            </v-card>
+
+            <v-card width="400px" class="mx-auto my-12">
+              <v-card-title>参考サイト</v-card-title>
+              <v-card-text>
+                <ul>
+                  <li>
+                    <a
+                      href="https://wiki.xn--rckteqa2e.com/wiki/%E3%81%82%E3%81%BE%E3%81%84%E3%81%8B%E3%81%8A%E3%82%8A%E3%81%AE%E3%81%99%E3%82%8B%E3%81%8D"
+                      >ポケモンwiki</a
+                    >
+                  </li>
+                </ul>
+              </v-card-text>
+            </v-card>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="javascript/javascript.js"></script>
+  </body>
+</html>
